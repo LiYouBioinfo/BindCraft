@@ -1,5 +1,9 @@
 #!/bin/bash
 ################## BindCraft installation script
+conda install -n base -c conda-forge -y conda-libmamba-solver >/dev/null 2>&1 || true
+conda config --set solver libmamba
+conda config --set channel_priority strict
+
 ################## specify conda/mamba folder, and installation folder for git repositories, and whether to use mamba or $pkg_manager
 # Default value for pkg_manager
 pkg_manager='conda'
